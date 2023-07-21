@@ -1,4 +1,4 @@
-import { Dispatch, FC, memo, SetStateAction } from "react";
+import { Dispatch, FC, memo, SetStateAction } from 'react';
 import { HeaderThemes } from '../../types/headerThemes.ts';
 import { useHeaderTheme } from '../../hooks/useHeaderTheme.ts';
 

@@ -1,10 +1,6 @@
 import { FC, PropsWithChildren } from 'react';
 import { IRegistrationInput } from './IRegistrationInput.ts';
-import {
-  Path,
-  RegisterOptions,
-  UseFormRegister,
-} from 'react-hook-form';
+import { Path, RegisterOptions, UseFormRegister } from 'react-hook-form';
 
 interface IFileDropProps extends PropsWithChildren {
   register: UseFormRegister<IRegistrationInput>;

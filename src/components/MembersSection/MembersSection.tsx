@@ -1,4 +1,4 @@
-import { Dispatch, FC, memo, SetStateAction } from "react";
+import { Dispatch, FC, memo, SetStateAction } from 'react';
 import MembersCardsContainer from './MembersCardsContainer.tsx';
 import { internationalCommittee, organisingCommittee } from './memberData.ts';
 import { useHeaderTheme } from '../../hooks/useHeaderTheme.ts';

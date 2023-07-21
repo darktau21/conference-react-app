@@ -4,7 +4,7 @@ import {
   SetStateAction,
   useCallback,
   useEffect,
-  useRef
+  useRef,
 } from 'react';
 
 export function useHeaderTheme(currentTheme: HeaderThemes, setFunction: Dispatch<SetStateAction<HeaderThemes>>) {

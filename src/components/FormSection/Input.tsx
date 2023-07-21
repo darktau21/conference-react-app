@@ -1,9 +1,5 @@
 import { FC, PropsWithChildren } from 'react';
-import {
-  Path,
-  RegisterOptions,
-  UseFormRegister
-} from 'react-hook-form';
+import { Path, RegisterOptions, UseFormRegister } from 'react-hook-form';
 import { IRegistrationInput } from './IRegistrationInput.ts';
 
 interface IInputProps extends PropsWithChildren {

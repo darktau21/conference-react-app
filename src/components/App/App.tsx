@@ -1,8 +1,8 @@
-import { FC, useState } from "react";
-import Header from "../Header/Header.tsx";
-import PromoSection from "../PromoSection/PromoSection.tsx";
-import InfoSection from "../InfoSection/InfoSection.tsx";
-import MembersSection from "../MembersSection/MembersSection.tsx";
+import { FC, useState } from 'react';
+import Header from '../Header/Header.tsx';
+import PromoSection from '../PromoSection/PromoSection.tsx';
+import InfoSection from '../InfoSection/InfoSection.tsx';
+import MembersSection from '../MembersSection/MembersSection.tsx';
 import FormSection from '../FormSection/FormSection.tsx';
 import ArticleRulesSection
   from '../ArticleRulesSection/ArticleRulesSection.tsx';

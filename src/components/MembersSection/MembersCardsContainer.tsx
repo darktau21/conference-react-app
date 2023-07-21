@@ -1,5 +1,5 @@
-import { FC } from "react";
-import { IMember } from "../../types/members.ts";
+import { FC } from 'react';
+import { IMember } from '../../types/members.ts';
 import MemberCard from './MemberCard.tsx';
 
 interface MembersCardsContainerProps {
