@@ -1,114 +1,138 @@
 import { Dispatch, FC, memo, SetStateAction } from 'react';
 import { HeaderThemes } from '../../types/headerThemes.ts';
 import { useHeaderTheme } from '../../hooks/useHeaderTheme.ts';
+import { Trans, useTranslation } from 'react-i18next';
 
 const InfoSection: FC<{
   setHeaderTheme: Dispatch<SetStateAction<HeaderThemes>>
 }> = memo(({setHeaderTheme}) => {
   const themeRef = useHeaderTheme(HeaderThemes.dark, setHeaderTheme);
+  const {t} = useTranslation();
 
   return (
     <section id={'info'} ref={themeRef} className="info-section bg-black pb-10">
       <div
         className="container mx-auto text-white xs:m-w-[300px] px-6 mb-10 relative z-20">
-        <h1 className="font-bold uppercase text-3xl pt-20">Научная тематика
-          конференции</h1>
+        <h1 className="font-bold uppercase text-3xl pt-20">
+          {t('infoSection.themesHeading')}
+        </h1>
         <ol className="p-10 list-decimal leading-10">
           <li>
-            Естественные и антропогенные факторы почвообразования в формировании
-            полигенетического
-            почвенного покрова в степной и лесостепной зонах. Актуальные
-            проблемы физики, химии, биогеохимии
-            и биологии почв.
+            {t('infoSection.themeList.theme1')}
           </li>
           <li>
-            Роль почвенного покрова в обеспечении продовольственной безопасности
-            страны. Ресурсосберегающие
-            технологии в повышении плодородия сельскохозяйственных земель
-            степной и лесостепной зон.
+            {t('infoSection.themeList.theme2')}
           </li>
           <li>
-            Теоретические и практические аспекты оценки, охраны и рационального
-            использования почвенного
-            покрова с участием черноземов.
+            {t('infoSection.themeList.theme3')}
           </li>
           <li>
-            Почвы урбо- и техногенных ландшафтов степной и лесостепной зон.
+            {t('infoSection.themeList.theme4')}
           </li>
         </ol>
         <p className="font-bold text-[34px] flex content-center justify-center">
-          Время проведения конференции: 12–17 сентября 2023 г.
+          {t('infoSection.spendingTime')}
         </p>
-        <h1 className="font-bold uppercase text-3xl pt-10">Примерная программа
-          конференции</h1>
+        <h1 className="font-bold uppercase text-3xl pt-10">
+          {t('infoSection.programHeading')}
+        </h1>
         <div className="p-10 leading-7">
           <p>
-            <span className="font-bold text-[20px]">
-              12.09.2023
-            </span>
-            &nbsp;&ndash; день заезда. В 9 утра поездка
-            экскурсия &laquo;Сельский туризм&raquo; в
-            Неклиновский район Ростовской области на
-            Био-Хутор &laquo;Петровский&raquo;&mdash; первый
-            производитель
-            органических продуктов на Юге России,&nbsp;
-            <a href="https://biohutor.ru/tourism" target={'_blank'}
-              rel={'noreferrer noopener'}
-              className={'text-indigo-600'}>
-              https://biohutor.ru/tourism
-            </a>
+            <Trans
+              i18nKey={'infoSection.program.item1'}
+              components={{
+                span: <span className="font-bold text-[20px]"/>,
+                a: <a
+                  href="https://biohutor.ru/tourism"
+                  target={'_blank'}
+                  rel={'noreferrer noopener'}
+                  className={'text-indigo-600'}
+                />,
+              }}
+            />
+
           </p>
           <p>
-            <span className="font-bold text-[20px]">13.09.2023</span>
-            &nbsp;&ndash; открытие конференции, пленарные доклады, работа секций
+            <Trans
+              i18nKey={'infoSection.program.item2'}
+              components={{
+                span: <span className="font-bold text-[20px]"/>,
+              }}
+            />
           </p>
-          <p><span
-            className="font-bold text-[20px]">14.09.2023</span> &nbsp;&ndash; работа
-            секций</p>
-          <p><span
-            className="font-bold text-[20px]">15.09.2023</span> &nbsp;&ndash; работа
-            Международной
-            молодежной школы</p>
           <p>
-            <span className="font-bold text-[20px]">16.09.2023</span>
-            &nbsp;&ndash; полевая экскурсия на длительный опыт
-            контурно-ландшафтного земледелия
-            (восстановление
-            плодородия эродированной пашни ведением специальных севооборотов,
-            приемов обработки почвы и
-            удобрений) Федерального ростовского аграрного научного центра –
-            ФРАНЦ.
+            <Trans
+              i18nKey={'infoSection.program.item3'}
+              components={{
+                span: <span className="font-bold text-[20px]"/>,
+              }}
+            />
           </p>
-          <p><span
-            className="font-bold text-[20px]">17.09.2023</span>&nbsp;&ndash; день
-            отъезда</p>
+          <p>
+            <Trans
+              i18nKey={'infoSection.program.item4'}
+              components={{
+                span: <span className="font-bold text-[20px]"/>,
+              }}
+            />
+          </p>
+          <p>
+            <Trans
+              i18nKey={'infoSection.program.item5'}
+              components={{
+                span: <span className="font-bold text-[20px]"/>,
+              }}
+            />
+          </p>
+          <p>
+            <Trans
+              i18nKey={'infoSection.program.item6'}
+              components={{
+                span: <span className="font-bold text-[20px]"/>,
+              }}
+            />
+          </p>
         </div>
         <p className="pb-5">
-          <span
-            className="font-bold text-[20px] uppercase">место проведения:</span>
-          &nbsp;г. Ростов-на-Дону, ФГАОУ ВО «Южный федеральный университет», ул.
-          Б. Садовая, 105
+          <Trans
+            i18nKey={'infoSection.place'}
+            components={{
+              span: <span className="font-bold text-[20px] uppercase"/>,
+            }}
+          />
         </p>
         <p className="pb-5">
-          <span
-            className="font-bold text-[20px] uppercase">язык конференции:</span>
-          &nbsp;русский, английский.
+          <Trans
+            i18nKey={'infoSection.language'}
+            components={{
+              span: <span className="font-bold text-[20px] uppercase"/>,
+            }}
+          />
         </p>
-        <p className="pb-5"><span className="font-bold text-[20px] uppercase">формы участия:</span>
-          &nbsp;очное участие (выступление или представление стендового доклада
-          и публикация материалов,
-          выступление онлайн) и заочное участие (только публикация материалов).
-          Материалы конференции будут
-          изданы в печатном виде к началу конференции.
+        <p className="pb-5">
+          <Trans
+            i18nKey={'infoSection.participationForms'}
+            components={{
+              span: <span className="font-bold text-[20px] uppercase"/>,
+            }}
+          />
         </p>
-        <p className="font-bold text-[24px] pb-2.5">КОНТРОЛЬНЫЕ ДАТЫ:</p>
-        <p className="leading-7"><span
-          className="font-bold text-[20px]">20.07.2023</span>
-          &nbsp;&ndash; срок подачи регистрационной формы
+        <p className="font-bold text-[24px] pb-2.5 uppercase">{t('infoSection.deadlineHeading')}</p>
+        <p className="leading-7">
+          <Trans
+            i18nKey={'infoSection.deadlines.date1'}
+            components={{
+              span: <span className="font-bold text-[20px]"/>,
+            }}
+          />
         </p>
-        <p className="leading-7"><span
-          className="font-bold text-[20px] pb-10">20.08.2023</span>
-          &nbsp;&ndash; срок подачи тезисов докладов
+        <p className="leading-7">
+          <Trans
+            i18nKey={'infoSection.deadlines.date2'}
+            components={{
+              span: <span className="font-bold text-[20px]"/>,
+            }}
+          />
         </p>
       </div>
     </section>

@@ -5,6 +5,7 @@ import {
   SetStateAction,
   useEffect,
 } from 'react';
+import { useTranslation } from 'react-i18next';
 
 type Props = {
   changeState: Dispatch<SetStateAction<boolean>>
@@ -20,6 +21,9 @@ const MobileMenuNav = ({changeState}: Props): ReactElement => {
       document.body.style.overflow = '';
     };
   }, []);
+
+  const {t} = useTranslation();
+
   return (
     <div
       className={'fixed top-0 left-0 w-[100%] h-[100vh] bg-black/60 z-50 lg:hidden back'}
@@ -32,18 +36,37 @@ const MobileMenuNav = ({changeState}: Props): ReactElement => {
       }}>
       <nav className={'bg-white w-8/12 h-[100%]'}>
         <ul className={'h-[100%] flex flex-col items-center'}>
-          <li><a href="#info" className={liClassNames}>Программа</a></li>
-          <li><a href="#members-organising" className={liClassNames}>Организационный
-            комитет</a></li>
-          <li><a href="#members-international" className={liClassNames}>Международный
-            комитет</a></li>
-          <li><a href="#article-rules" className={liClassNames}>Правила
-            оформления
-            статей</a></li>
-          <li><a href="#" className={liClassNames}>Контакты</a></li>
-          <li><a href="#registration-form" className={liClassNames}>Подача
-            заявки
-          <span aria-hidden="true">&rarr;</span></a></li>
+          <li>
+            <a href="#info" className={liClassNames}>
+              {t('header.program')}
+            </a>
+          </li>
+          <li>
+            <a href="#members-organising" className={liClassNames}>
+              {t('header.organizationalCommittee')}
+            </a>
+          </li>
+          <li>
+            <a href="#members-international" className={liClassNames}>
+              {t('header.internationalCommittee')}
+            </a>
+          </li>
+          <li>
+            <a href="#article-rules" className={liClassNames}>
+              {t('header.articleRules')}
+            </a>
+          </li>
+          <li>
+            <a href="#" className={liClassNames}>
+              {t('header.contacts')}
+            </a>
+          </li>
+          <li>
+            <a href="#registration-form" className={liClassNames}>
+              {t('header.registrationForm')}
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </li>
         </ul>
       </nav>
     </div>

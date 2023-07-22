@@ -1,6 +1,7 @@
 import { FC, PropsWithChildren } from 'react';
 import { IRegistrationInput } from './IRegistrationInput.ts';
 import { Path, RegisterOptions, UseFormRegister } from 'react-hook-form';
+import { Trans } from 'react-i18next';
 
 interface IFileDropProps extends PropsWithChildren {
   register: UseFormRegister<IRegistrationInput>;
@@ -12,10 +13,8 @@ interface IFileDropProps extends PropsWithChildren {
 
 const FileDropZone: FC<IFileDropProps> = ({
   children,
-  id,
-  register,
   errorMessage,
-  options}) => {
+}) => {
   return (
     <>
       <div className="flex items-center justify-center w-full span-col-2">
@@ -29,11 +28,13 @@ const FileDropZone: FC<IFileDropProps> = ({
                 strokeWidth="2"
                 d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
             </svg>
-            <p className="mb-2 text-sm text-gray-500"><span
-              className="font-semibold">Click to upload</span> or drag and drop
+            <p className="mb-2 text-sm text-gray-500 text-center">
+              <Trans
+                i18nKey={'registrationForm.dropZoneLabel'}
+                components={{
+                  span: <span className="font-semibold"/>,
+                }}/>
             </p>
-            <p className="text-xs text-gray-500">SVG, PNG,
-              JPG or GIF (MAX. 800x400px)</p>
           </div>
           <input id="dropzone-file" type="file" className="hidden"/>
         </label>

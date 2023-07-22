@@ -2,11 +2,14 @@ import { Dispatch, FC, memo, SetStateAction } from 'react';
 import RegistrationForm from './RegistrationForm.tsx';
 import { useHeaderTheme } from '../../hooks/useHeaderTheme.ts';
 import { HeaderThemes } from '../../types/headerThemes.ts';
+import { useTranslation } from 'react-i18next';
 
 const FormSection: FC<{
   setHeaderTheme: Dispatch<SetStateAction<HeaderThemes>>
 }> = memo(({setHeaderTheme}) => {
   const themeRef = useHeaderTheme(HeaderThemes.light, setHeaderTheme);
+  const {t} = useTranslation();
+
   return (
     <section
       id={'registration-form'}
@@ -21,12 +24,12 @@ const FormSection: FC<{
       </div>
       <div className="mx-auto max-w-2xl text-center">
         <h2
-          className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-          РЕГИСТРАЦИОННАЯ ФОРМА
+          className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl uppercase"
+        >
+          {t('registrationForm.heading')}
         </h2>
         <p className="mt-2 text-base leading-8 text-gray-600">
-          для участия в Международной конференции «Современное состояние
-          черноземов» (либо/и в Международной молодежной школе-семинаре).
+          {t('registrationForm.description')}
         </p>
       </div>
       <RegistrationForm/>

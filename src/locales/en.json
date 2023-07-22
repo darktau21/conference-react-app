@@ -1,0 +1,92 @@
+{
+  "header": {
+    "program": "test",
+    "organizationalCommittee": "test",
+    "internationalCommittee": "test",
+    "articleRules": "test",
+    "contacts": "test",
+    "registrationForm": "test",
+    "closeMenu": "test"
+  },
+  "promoSection": {
+    "heading": "test",
+    "subHeading": "test",
+    "text": "test",
+    "btn": "test"
+  },
+  "infoSection": {
+    "themesHeading": "test",
+    "themeList": {
+      "theme1": "test",
+      "theme2": "test",
+      "theme3": "test",
+      "theme4": "test"
+    },
+    "spendingTime": "test",
+    "programHeading": "test",
+    "program": {
+      "item1": "<span>12.09.2023</span> — test, <a>https://biohutor.ru/tourism</a>",
+      "item2": "<span>13.09.2023</span> — test",
+      "item3": "<span>14.09.2023</span> — test",
+      "item4": "<span>15.09.2023</span> — test",
+      "item5": "<span>16.09.2023</span> — test.",
+      "item6": "<span>17.09.2023</span> — test"
+    },
+    "place": "<span>test</span> — test",
+    "language": "<span>test</span> — test",
+    "participationForms": "<span>test</span> — test",
+    "deadlineHeading": "test",
+    "deadlines": {
+      "date1": "<span>20.07.2023</span> — test",
+      "date2": "<span>20.08.2023</span> — test"
+    }
+  },
+  "membersSection": {
+    "organisingHeading": "test",
+    "organisingCoChairs": "test",
+    "organisingMembers": "test",
+    "intHeading": "test",
+    "intChairs": "test",
+    "intMembers": "test"
+  },
+  "registrationForm": {
+    "heading": "test",
+    "description": "test",
+    "lastname": "test",
+    "firstname": "test",
+    "middleName": "test",
+    "city": "test",
+    "organization": "test",
+    "position": "test",
+    "academicDegree": "test",
+    "academicGrade": "test",
+    "reportName": "test",
+    "conferenceDirection": "test",
+    "concernForm": "test",
+    "email": "test",
+    "phoneNumber": "test",
+    "address": "test",
+    "booking": {
+      "label": "test",
+      "optionsTitle": "test",
+      "independently": "test",
+      "required": "test",
+      "hasRoom": "test"
+    },
+    "dropZoneLabel": "<span>test</span> test",
+    "errorMsg":{
+      "required": "test",
+      "minLength": "test",
+      "file": "Все файлы должны быть формата doc или docx"
+    },
+    "dropZoneDescription": "test",
+    "submit": "test"
+  },
+  "articleRulesSection": {
+    "p1": "test",
+    "p2": "test",
+    "p3": "test",
+    "p4": "test",
+    "rulesAppendix": "test"
+  }
+}

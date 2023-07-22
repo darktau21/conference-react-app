@@ -3,27 +3,30 @@ import { RegisterOptions, SubmitHandler, useForm } from 'react-hook-form';
 import { IRegistrationInput } from './IRegistrationInput.ts';
 import Input from './Input.tsx';
 import FileDropZone from './FileDropZone.tsx';
-
-const inputOptions: RegisterOptions = {
-  required: {
-    value: false,
-    message: 'Обязательное поле',
-  },
-  minLength: {
-    value: 2,
-    message: 'Минимум 2 символа'
-  }
-};
+import { useTranslation } from 'react-i18next';
 
 const RegistrationForm: FC = () => {
   const {
     register,
     handleSubmit,
     formState: {errors},
-    control,
   } = useForm<IRegistrationInput>({
     mode: 'all'
   });
+
+  const {t} = useTranslation();
+
+  const inputOptions: RegisterOptions = {
+    required: {
+      value: true,
+      message: t('registrationForm.errorMsg.required'),
+    },
+    minLength: {
+      value: 2,
+      message: t('registrationForm.errorMsg.minLength')
+    }
+  };
+
   const onSubmit: SubmitHandler<IRegistrationInput> = (data) => console.log(data);
 
   return (
@@ -34,7 +37,7 @@ const RegistrationForm: FC = () => {
       <div className="grid grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2">
         <div>
           <Input
-            label={'Фамилия'}
+            label={t('registrationForm.lastname')}
             register={register}
             autoComplete={'family-name'}
             id={'lastname'}
@@ -44,7 +47,7 @@ const RegistrationForm: FC = () => {
         </div>
         <div>
           <Input
-            label={'Имя'}
+            label={t('registrationForm.firstname')}
             register={register}
             autoComplete={'given-name'}
             id={'firstname'}
@@ -54,7 +57,7 @@ const RegistrationForm: FC = () => {
         </div>
         <div>
           <Input
-            label={'Отчество'}
+            label={t('registrationForm.middleName')}
             register={register}
             autoComplete={'additional-name'}
             id={'middleName'}
@@ -64,7 +67,7 @@ const RegistrationForm: FC = () => {
         </div>
         <div className="sm:col-span-2">
           <Input
-            label={'Страна, город'}
+            label={t('registrationForm.city')}
             register={register}
             autoComplete={'country-name'}
             id={'city'}
@@ -74,7 +77,7 @@ const RegistrationForm: FC = () => {
         </div>
         <div className="sm:col-span-2">
           <Input
-            label={'Организация (полное официальное название)'}
+            label={t('registrationForm.organization')}
             register={register}
             autoComplete={'organization'}
             id={'organization'}
@@ -84,7 +87,7 @@ const RegistrationForm: FC = () => {
         </div>
         <div>
           <Input
-            label={'Должность'}
+            label={t('registrationForm.position')}
             register={register}
             id={'position'}
             errorMessage={errors.position?.message}
@@ -93,7 +96,7 @@ const RegistrationForm: FC = () => {
         </div>
         <div>
           <Input
-            label={'Ученая степень'}
+            label={t('registrationForm.academicDegree')}
             register={register}
             id={'academicDegree'}
             errorMessage={errors.academicDegree?.message}
@@ -102,7 +105,7 @@ const RegistrationForm: FC = () => {
         </div>
         <div>
           <Input
-            label={'Ученое звание'}
+            label={t('registrationForm.academicGrade')}
             register={register}
             id={'academicGrade'}
             errorMessage={errors.academicGrade?.message}
@@ -111,7 +114,7 @@ const RegistrationForm: FC = () => {
         </div>
         <div>
           <Input
-            label={'Название доклада'}
+            label={t('registrationForm.reportName')}
             register={register}
             id={'reportName'}
             errorMessage={errors.reportName?.message}
@@ -120,7 +123,7 @@ const RegistrationForm: FC = () => {
         </div>
         <div>
           <Input
-            label={'Направление работы конференции'}
+            label={t('registrationForm.conferenceDirection')}
             register={register}
             id={'conferenceDirection'}
             options={inputOptions}
@@ -129,7 +132,7 @@ const RegistrationForm: FC = () => {
         </div>
         <div>
           <Input
-            label={'Форма участия (очное, заочное)'}
+            label={t('registrationForm.concernForm')}
             register={register}
             id={'concernForm'}
             errorMessage={errors.concernForm?.message}
@@ -138,7 +141,7 @@ const RegistrationForm: FC = () => {
         </div>
         <div className="sm:col-span-2">
           <Input
-            label={'Email'}
+            label={t('registrationForm.email')}
             register={register}
             autoComplete={'email'}
             id={'email'}
@@ -148,7 +151,7 @@ const RegistrationForm: FC = () => {
         </div>
         <div className="sm:col-span-2">
           <Input
-            label={'Номер телефона'}
+            label={t('registrationForm.phoneNumber')}
             register={register}
             autoComplete={'tel'}
             id={'phoneNumber'}
@@ -158,7 +161,7 @@ const RegistrationForm: FC = () => {
         </div>
         <div className="sm:col-span-2">
           <Input
-            label={'Почтовый адрес'}
+            label={t('registrationForm.address')}
             register={register}
             autoComplete={'street-address'}
             id={'address'}
@@ -169,15 +172,23 @@ const RegistrationForm: FC = () => {
         <div className="sm:col-span-2">
           <Input
             select={true}
-            label={'Бронирование (выбрать)'}
+            label={t('registrationForm.booking.label')}
             id="booking"
             register={register}
             errorMessage={errors.booking?.message}
             options={inputOptions}>
-            <option value="" hidden>Выберите опцию</option>
-            <option value="independently">Самостоятельно</option>
-            <option value="required">Требуется место</option>
-            <option value="hasRoom">Номер в кампусе</option>
+            <option value="" hidden>
+              {t('registrationForm.booking.optionsTitle')}
+            </option>
+            <option value="independently">
+              {t('registrationForm.booking.independently')}
+            </option>
+            <option value="required">
+              {t('registrationForm.booking.required')}
+            </option>
+            <option value="hasRoom">
+              {t('registrationForm.booking.hasRoom')}
+            </option>
           </Input>
         </div>
         <FileDropZone
@@ -189,7 +200,7 @@ const RegistrationForm: FC = () => {
               isDoc: (files: FileList) => {
                 for (let i = 0; i < files.length; i++) {
                   if (!['application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'].includes(files[i].type)) {
-                    return 'Все файлы должны быть формата doc или docx';
+                    return t('registrationForm.errorMsg.file');
                   }
                 }
                 return true;
@@ -197,16 +208,12 @@ const RegistrationForm: FC = () => {
             }
           }}
         >
-          Файл, содержащий заявку на участие, называть следующим образом:
-          Фамилия участника, слово «Заявка» через пробел
-          (Ivanov_zajavka-conf.doc) либо (Ivanov_zajavka-shkola.doc), для
-          каждого соавтора следует оформить отдельную заявку. Файл, содержащий
-          статью, называть по имени первого автора (Ivanov.doc).
+          {t('registrationForm.dropZoneDescription')}
         </FileDropZone>
       </div>
       <div className="mt-10">
         <input type="submit"
-          value={'Отправить заявку'}
+          value={t('registrationForm.submit')}
           className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"/>
       </div>
     </form>
