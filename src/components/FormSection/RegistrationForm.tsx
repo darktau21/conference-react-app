@@ -10,6 +10,8 @@ const RegistrationForm: FC = () => {
     register,
     handleSubmit,
     formState: {errors},
+    setValue,
+    watch
   } = useForm<IRegistrationInput>({
     mode: 'all'
   });
@@ -35,7 +37,7 @@ const RegistrationForm: FC = () => {
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className="grid grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2">
-        <div>
+        <div className="xs:col-span-2">
           <Input
             label={t('registrationForm.lastname')}
             register={register}
@@ -45,7 +47,7 @@ const RegistrationForm: FC = () => {
             options={inputOptions}
           />
         </div>
-        <div>
+        <div className="xs:col-span-2">
           <Input
             label={t('registrationForm.firstname')}
             register={register}
@@ -55,7 +57,7 @@ const RegistrationForm: FC = () => {
             options={inputOptions}
           />
         </div>
-        <div>
+        <div className="xs:col-span-2">
           <Input
             label={t('registrationForm.middleName')}
             register={register}
@@ -65,7 +67,7 @@ const RegistrationForm: FC = () => {
             errorMessage={errors.middleName?.message}
           />
         </div>
-        <div className="sm:col-span-2">
+        <div className="xs:col-span-2">
           <Input
             label={t('registrationForm.city')}
             register={register}
@@ -75,7 +77,7 @@ const RegistrationForm: FC = () => {
             options={inputOptions}
           />
         </div>
-        <div className="sm:col-span-2">
+        <div className="col-span-2">
           <Input
             label={t('registrationForm.organization')}
             register={register}
@@ -85,7 +87,7 @@ const RegistrationForm: FC = () => {
             options={inputOptions}
           />
         </div>
-        <div>
+        <div className={'col-span-2'}>
           <Input
             label={t('registrationForm.position')}
             register={register}
@@ -94,7 +96,7 @@ const RegistrationForm: FC = () => {
             options={inputOptions}
           />
         </div>
-        <div>
+        <div className={'col-span-2'}>
           <Input
             label={t('registrationForm.academicDegree')}
             register={register}
@@ -103,7 +105,7 @@ const RegistrationForm: FC = () => {
             options={inputOptions}
           />
         </div>
-        <div>
+        <div className={'xs:col-span-2'}>
           <Input
             label={t('registrationForm.academicGrade')}
             register={register}
@@ -112,7 +114,7 @@ const RegistrationForm: FC = () => {
             options={inputOptions}
           />
         </div>
-        <div>
+        <div className={'xs:col-span-2'}>
           <Input
             label={t('registrationForm.reportName')}
             register={register}
@@ -121,7 +123,7 @@ const RegistrationForm: FC = () => {
             options={inputOptions}
           />
         </div>
-        <div>
+        <div className={'xs:col-span-2'}>
           <Input
             label={t('registrationForm.conferenceDirection')}
             register={register}
@@ -130,7 +132,7 @@ const RegistrationForm: FC = () => {
             errorMessage={errors.conferenceDirection?.message}
           />
         </div>
-        <div>
+        <div className={'xs:col-span-2'}>
           <Input
             label={t('registrationForm.concernForm')}
             register={register}
@@ -139,7 +141,7 @@ const RegistrationForm: FC = () => {
             options={inputOptions}
           />
         </div>
-        <div className="sm:col-span-2">
+        <div className="xs:col-span-2">
           <Input
             label={t('registrationForm.email')}
             register={register}
@@ -149,7 +151,7 @@ const RegistrationForm: FC = () => {
             options={inputOptions}
           />
         </div>
-        <div className="sm:col-span-2">
+        <div className="xs:col-span-2">
           <Input
             label={t('registrationForm.phoneNumber')}
             register={register}
@@ -159,7 +161,7 @@ const RegistrationForm: FC = () => {
             options={inputOptions}
           />
         </div>
-        <div className="sm:col-span-2">
+        <div className="xs:col-span-2">
           <Input
             label={t('registrationForm.address')}
             register={register}
@@ -169,7 +171,7 @@ const RegistrationForm: FC = () => {
             options={inputOptions}
           />
         </div>
-        <div className="sm:col-span-2">
+        <div className="xs:col-span-2">
           <Input
             select={true}
             label={t('registrationForm.booking.label')}
@@ -195,6 +197,8 @@ const RegistrationForm: FC = () => {
           id={'files'}
           register={register}
           errorMessage={errors.files?.message}
+          setValue={setValue}
+          watch={watch}
           options={{
             validate: {
               isDoc: (files: FileList) => {

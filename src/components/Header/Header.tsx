@@ -36,7 +36,7 @@ const Header: FC<{headerTheme: HeaderThemes}> = ({headerTheme}) => {
   };
 
   const {i18n} = useTranslation();
-  console.log(i18n.language);
+
   return (
     <Transition
       timeout={duration}
@@ -84,6 +84,7 @@ const Header: FC<{headerTheme: HeaderThemes}> = ({headerTheme}) => {
               </a>
             </div>
             <select
+              value={i18n.language}
               className={'ml-auto bg-transparent rounded-md font-bold'}
               onChange={(e: ChangeEvent<HTMLSelectElement>) => {
                 i18n.changeLanguage(e.currentTarget.value);
@@ -91,13 +92,11 @@ const Header: FC<{headerTheme: HeaderThemes}> = ({headerTheme}) => {
             >
               <option
                 value={'ru-RU'}
-                selected={i18n.language === 'ru-RU'}
               >
                 RU
               </option>
               <option
                 value={'en-US'}
-                selected={i18n.language === 'en-US'}
               >
                 EN
               </option>
