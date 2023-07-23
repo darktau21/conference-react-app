@@ -17,7 +17,7 @@ const Header: FC<{headerTheme: HeaderThemes}> = ({headerTheme}) => {
     classNames = 'text-gray-900 transition-colors fixed bg-white inset-x-0 top-0 z-50 drop-shadow-xl';
     break;
   case HeaderThemes.dark:
-    classNames = 'text-white bg-black transition-colors fixed inset-x-0 top-0 z-50 drop-shadow-xl';
+    classNames = 'text-white bg-green-700 transition-colors fixed inset-x-0 top-0 z-50 drop-shadow-xl';
     break;
   }
 
@@ -63,6 +63,10 @@ const Header: FC<{headerTheme: HeaderThemes}> = ({headerTheme}) => {
             </div>
             <div
               className="lg:flex-1 hidden lg:flex lg:gap-x-12 justify-center text-inherit">
+              <a href="#digest"
+                className="text-base font-semibold leading-6 ">
+                {t('header.digest')}
+              </a>
               <a href="#info"
                 className="text-base font-semibold leading-6 ">
                 {t('header.program')}

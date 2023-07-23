@@ -10,7 +10,7 @@ const InfoSection: FC<{
   const {t} = useTranslation();
 
   return (
-    <section id={'info'} ref={themeRef} className="info-section bg-black pb-10">
+    <section id={'info'} ref={themeRef} className="info-section scroll-mt-5 bg-green-700 pb-10">
       <div
         className="container mx-auto text-white xs:m-w-[300px] px-6 mb-10 relative z-20">
         <h1 className="font-bold uppercase text-3xl pt-20">
@@ -46,7 +46,7 @@ const InfoSection: FC<{
                   href="https://biohutor.ru/tourism"
                   target={'_blank'}
                   rel={'noreferrer noopener'}
-                  className={'text-indigo-600'}
+                  className={'text-indigo-300'}
                 />,
               }}
             />
@@ -133,6 +133,16 @@ const InfoSection: FC<{
               span: <span className="font-bold text-[20px]"/>,
             }}
           />
+        </p>
+        <p className="leading-7 mt-4">
+          <a
+            href="/pdf/Сборник.pdf"
+            rel={'noreferrer noopener'}
+            id={'digest'}
+            className={'scroll-mt-48 text-indigo-300 font-semibold text-2xl'}
+          >
+            {t('infoSection.digest')}
+          </a>
         </p>
       </div>
     </section>

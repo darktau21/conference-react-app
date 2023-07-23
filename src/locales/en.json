@@ -1,5 +1,6 @@
 {
   "header": {
+    "digest": "test",
     "program": "test",
     "organizationalCommittee": "test",
     "internationalCommittee": "test",
@@ -39,7 +40,8 @@
     "deadlines": {
       "date1": "<span>20.07.2023</span> — test",
       "date2": "<span>20.08.2023</span> — test"
-    }
+    },
+    "digest": "test"
   },
   "membersSection": {
     "organisingHeading": "test",

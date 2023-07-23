@@ -4,6 +4,7 @@ import { IRegistrationInput } from './IRegistrationInput.ts';
 import Input from './Input.tsx';
 import FileDropZone from './FileDropZone.tsx';
 import { useTranslation } from 'react-i18next';
+import axios from 'axios';
 
 const RegistrationForm: FC = () => {
   const {
@@ -11,9 +12,10 @@ const RegistrationForm: FC = () => {
     handleSubmit,
     formState: {errors},
     setValue,
-    watch
+    watch,
+    reset,
   } = useForm<IRegistrationInput>({
-    mode: 'all'
+    mode: 'all',
   });
 
   const {t} = useTranslation();
@@ -25,11 +27,31 @@ const RegistrationForm: FC = () => {
     },
     minLength: {
       value: 2,
-      message: t('registrationForm.errorMsg.minLength')
-    }
+      message: t('registrationForm.errorMsg.minLength'),
+    },
   };
 
-  const onSubmit: SubmitHandler<IRegistrationInput> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<IRegistrationInput> = (data) => {
+    const formData = new FormData();
+    Object.entries(data).forEach(([key, val]) => {
+      if (typeof val === 'string') {
+        formData.append(key, val);
+      }
+    });
+
+    [...data.files].forEach((file) => {
+      formData.append('files', file);
+    });
+
+    console.log(formData.getAll('files'));
+
+    axios.post('http://hotel-abobus.site', formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data'
+      }
+    })
+      .then(() => reset());
+  };
 
   return (
     <form
@@ -208,8 +230,8 @@ const RegistrationForm: FC = () => {
                   }
                 }
                 return true;
-              }
-            }
+              },
+            },
           }}
         >
           {t('registrationForm.dropZoneDescription')}

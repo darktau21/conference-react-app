@@ -1,5 +1,6 @@
 {
   "header": {
+    "digest": "Сборник",
     "program": "Программа",
     "organizationalCommittee": "Организационный комитет",
     "internationalCommittee": "Международный комитет",
@@ -39,7 +40,8 @@
     "deadlines": {
       "date1": "<span>20.07.2023</span> — срок подачи регистрационной формы",
       "date2": "<span>20.08.2023</span> — срок подачи тезисов докладов"
-    }
+    },
+    "digest": "Посмотерть сборник"
   },
   "membersSection": {
     "organisingHeading": "Организационный комитет конференции",

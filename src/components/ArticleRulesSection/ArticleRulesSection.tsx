@@ -10,7 +10,7 @@ const ArticleRulesSection: FC<{
   const {t} = useTranslation();
 
   return (
-    <section id={'article-rules'} ref={themeRef} className="bg-black">
+    <section id={'article-rules'} ref={themeRef} className="bg-green-700">
       <div className="container mx-auto text-white xs:m-w-[300px] px-6 mb-10">
         <div className="p-10 list-decimal leading-7">
           <p className="pb-2.5">
@@ -27,7 +27,7 @@ const ArticleRulesSection: FC<{
                   href="/pdf/Список-гостиниц.pdf"
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="text-indigo-600"/>
+                  className="text-indigo-300"/>
               }}
             />
           </p>
@@ -38,7 +38,7 @@ const ArticleRulesSection: FC<{
             <a href="/pdf/Правила-оформления-статей.pdf"
               target="_blank"
               rel="noreferrer noopener"
-              className="text-indigo-600">
+              className="text-indigo-300">
               {t('articleRulesSection.rulesAppendix')}
             </a>
           </div>

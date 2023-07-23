@@ -37,6 +37,11 @@ const MobileMenuNav = ({changeState}: Props): ReactElement => {
       <nav className={'bg-white w-8/12 h-[100%]'}>
         <ul className={'h-[100%] flex flex-col items-center'}>
           <li>
+            <a href="#digest" className={liClassNames}>
+              {t('header.digest')}
+            </a>
+          </li>
+          <li>
             <a href="#info" className={liClassNames}>
               {t('header.program')}
             </a>
