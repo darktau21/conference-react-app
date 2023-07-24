@@ -1,8 +1,14 @@
-const ContactsSection = () => {
-  return (
-    <div>
+import { Dispatch, SetStateAction } from 'react';
+import { HeaderThemes } from '../../types/headerThemes.ts';
+import { useHeaderTheme } from '../../hooks/useHeaderTheme.ts';
 
-    </div>
+const ContactsSection = ({setHeaderTheme}: {setHeaderTheme: Dispatch<SetStateAction<HeaderThemes>>}) => {
+  const themeRef = useHeaderTheme(HeaderThemes.dark, setHeaderTheme);
+
+  return (
+    <footer ref={themeRef}>
+
+    </footer>
   );
 };
 

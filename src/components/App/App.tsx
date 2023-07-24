@@ -7,6 +7,7 @@ import FormSection from '../FormSection/FormSection.tsx';
 import ArticleRulesSection
   from '../ArticleRulesSection/ArticleRulesSection.tsx';
 import { HeaderThemes } from '../../types/headerThemes.ts';
+import ContactsSection from '../ContactsSection/ContactsSection.tsx';
 
 const App: FC = () => {
   const [headerTheme, setHeaderTheme] = useState<HeaderThemes>(HeaderThemes.transparent);
@@ -18,6 +19,7 @@ const App: FC = () => {
       <MembersSection setHeaderTheme={setHeaderTheme}/>
       <FormSection setHeaderTheme={setHeaderTheme}/>
       <ArticleRulesSection setHeaderTheme={setHeaderTheme}/>
+      <ContactsSection setHeaderTheme={setHeaderTheme}/>
     </>
   );
 };

@@ -12,7 +12,7 @@ const InfoSection: FC<{
   return (
     <section id={'info'} ref={themeRef} className="info-section scroll-mt-5 bg-green-700 pb-10">
       <div
-        className="container mx-auto text-white xs:m-w-[300px] px-6 mb-10 relative z-20">
+        className="container mx-auto text-white xs:m-w-[300px] px-6 mb-10 relative z-20 text-lg">
         <h1 className="font-bold uppercase text-3xl pt-20">
           {t('infoSection.themesHeading')}
         </h1>

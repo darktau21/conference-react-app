@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { RegisterOptions, SubmitHandler, useForm } from 'react-hook-form';
 import { IRegistrationInput } from './IRegistrationInput.ts';
 import Input from './Input.tsx';
@@ -18,6 +18,8 @@ const RegistrationForm: FC = () => {
     mode: 'all',
   });
 
+  const [state, setState] = useState<'idle' | 'pending' | 'success' | 'error'>('idle');
+
   const {t} = useTranslation();
 
   const inputOptions: RegisterOptions = {
@@ -32,6 +34,8 @@ const RegistrationForm: FC = () => {
   };
 
   const onSubmit: SubmitHandler<IRegistrationInput> = (data) => {
+    setState('pending');
+
     const formData = new FormData();
     Object.entries(data).forEach(([key, val]) => {
       if (typeof val === 'string') {
@@ -47,11 +51,36 @@ const RegistrationForm: FC = () => {
 
     axios.post('http://hotel-abobus.site', formData, {
       headers: {
-        'Content-Type': 'multipart/form-data'
-      }
+        'Content-Type': 'multipart/form-data',
+      },
     })
-      .then(() => reset());
+      .then(() => {
+        reset();
+        setState('success');
+      })
+      .catch(() => {
+        setState('error');
+      })
+      .finally(() => {
+        setTimeout(() => setState('idle'), 5000);
+      });
   };
+
+  let btnClasses = '';
+  switch (state) {
+  case 'idle':
+    btnClasses = 'bg-indigo-600 hover:bg-indigo-500 focus-visible:outline-indigo-600';
+    break;
+  case 'pending':
+    btnClasses = 'bg-yellow-600 hover:bg-yellow-500 focus-visible:outline-yellow-600';
+    break;
+  case 'success':
+    btnClasses = 'bg-green-600 hover:bg-green-500 focus-visible:outline-green-600';
+    break;
+  case 'error':
+    btnClasses = 'bg-red-600 hover:bg-red-500 focus-visible:outline-red-600';
+    break;
+  }
 
   return (
     <form
@@ -239,8 +268,10 @@ const RegistrationForm: FC = () => {
       </div>
       <div className="mt-10">
         <input type="submit"
-          value={t('registrationForm.submit')}
-          className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"/>
+          value={t(`registrationForm.submit.${state}`)}
+          className={'block w-full rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ' + btnClasses}
+          disabled={state !== 'idle'}
+        />
       </div>
     </form>
   );

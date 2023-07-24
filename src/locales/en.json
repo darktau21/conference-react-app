@@ -1,94 +1,99 @@
 {
   "header": {
-    "digest": "test",
-    "program": "test",
-    "organizationalCommittee": "test",
-    "internationalCommittee": "test",
-    "articleRules": "test",
-    "contacts": "test",
-    "registrationForm": "test",
+    "digest": "Conference proceedings",
+    "program": "Program",
+    "organizationalCommittee": "Organizational committee",
+    "internationalCommittee": "International committee",
+    "articleRules": "Article rules",
+    "contacts": "Contacts",
+    "registrationForm": "Register",
     "closeMenu": "test"
   },
   "promoSection": {
-    "heading": "test",
-    "subHeading": "test",
-    "text": "test",
-    "btn": "test"
+    "heading": "III International Scientific Conference",
+    "subHeading": "CURRENT STATE OF CHERNOZEMS",
+    "text": "The Conference will be dedicated to geography and genesis of soils, biogeochemistry, physics, chemistry, soil biology, as well as agrochemistry, ecology and melioration. The Conference will allow to exchange the researchers experience in the field of soil science, agrochemistry and ecology. The International School-Seminar for young scientists will be held within the framework of the conference. Young scientists will have an opportunity to listen leading scientists and discuss actual problems of soil science.",
+    "btn": "Register"
   },
   "infoSection": {
-    "themesHeading": "test",
+    "themesHeading": "SCIENTIFIC TOPICS OF THE CONFERENCE",
     "themeList": {
-      "theme1": "test",
-      "theme2": "test",
-      "theme3": "test",
-      "theme4": "test"
+      "theme1": "Natural and anthropogenic factors of soil formation in the steppe and forest-steppe zones. Actual problems of physics, chemistry, biogeochemistry, and soil biology.",
+      "theme2": "The role of the soil cover in ensuring the food security of the country. Resource-saving technologies in increasing the fertility of agricultural lands in the steppe and forest-steppe zones.",
+      "theme3": "Theoretical and practical aspects of the assessment, protection, and rational use of soil cover with the participation of chernozems.",
+      "theme4": "Soils of urban and technogenic landscapes of the steppe and forest-steppe zones."
     },
-    "spendingTime": "test",
-    "programHeading": "test",
+    "spendingTime": "Time of the conference: September 12-17, 2023",
+    "programHeading": "SAMPLE PROGRAM OF THE CONFERENCE",
     "program": {
-      "item1": "<span>12.09.2023</span> — test, <a>https://biohutor.ru/tourism</a>",
-      "item2": "<span>13.09.2023</span> — test",
-      "item3": "<span>14.09.2023</span> — test",
-      "item4": "<span>15.09.2023</span> — test",
-      "item5": "<span>16.09.2023</span> — test.",
-      "item6": "<span>17.09.2023</span> — test"
+      "item1": "<span>12.09.2023</span> — day of arrival. At 9 am, a trip excursion \"Rural tourism\" to the Neklinovsky district of the Rostov region to the Petrovsky Bio-Farm — the first producer of organic products in the South of Russia, <a>https://biohutor.ru/tourism</a>",
+      "item2": "<span>13.09.2023</span> — opening of the conference, plenary reports, work of sections.",
+      "item3": "<span>14.09.2023</span> — work of sections.",
+      "item4": "<span>15.09.2023</span> — work of the International Youth School.",
+      "item5": "<span>16.09.2023</span> — field excursion to the long-term experience of contour and landscape farming (restoration of fertility of eroded arable land by conducting special crop rotations, tillage techniques and fertilizers) of the Federal Rostov Agricultural Research Center.",
+      "item6": "<span>17.09.2023</span> — departure day."
     },
-    "place": "<span>test</span> — test",
-    "language": "<span>test</span> — test",
-    "participationForms": "<span>test</span> — test",
-    "deadlineHeading": "test",
+    "place": "<span>VENUE</span> — Rostov-on-Don, Southern Federal University, B. Sadovaya str., 105",
+    "language": "<span>CONFERENCE LANGUAGE</span> — Russian, English",
+    "participationForms": "<span>FORMS OF PARTICIPATION</span> — face-to-face participation (presentation or presentation of a poster report and publication of materials, online presentation) and correspondence participation (publication of materials only). The conference materials will be published in hard copy by the beginning of the conference.",
+    "deadlineHeading": "CONTROL DATES",
     "deadlines": {
-      "date1": "<span>20.07.2023</span> — test",
-      "date2": "<span>20.08.2023</span> — test"
+      "date1": "<span>20.07.2023</span> — deadline for submitting the registration form",
+      "date2": "<span>20.08.2023</span> — deadline for submitting abstracts"
     },
-    "digest": "test"
+    "digest": "View the conference proceedings"
   },
   "membersSection": {
-    "organisingHeading": "test",
-    "organisingCoChairs": "test",
-    "organisingMembers": "test",
-    "intHeading": "test",
-    "intChairs": "test",
-    "intMembers": "test"
+    "organisingHeading": "ORGANIZING COMMITTEE OF THE CONFERENCE",
+    "organisingCoChairs": "Co-Chairs",
+    "organisingMembers": "Members of the Organizing Committee",
+    "intHeading": "INTERNATIONAL PROGRAM COMMITTEE OF THE CONFERENCE",
+    "intChairs": "Chairman",
+    "intMembers": "Program Сommittee members"
   },
   "registrationForm": {
-    "heading": "test",
-    "description": "test",
-    "lastname": "test",
-    "firstname": "test",
-    "middleName": "test",
-    "city": "test",
-    "organization": "test",
-    "position": "test",
-    "academicDegree": "test",
-    "academicGrade": "test",
-    "reportName": "test",
-    "conferenceDirection": "test",
-    "concernForm": "test",
-    "email": "test",
-    "phoneNumber": "test",
-    "address": "test",
+    "heading": "Registration form",
+    "description": "To participate in the International Conference \"The current state of chernozems\" (or/and in the International Youth School-seminar)",
+    "lastname": "Lastname",
+    "firstname": "Firstname",
+    "middleName": "Middle Name",
+    "city": "City",
+    "organization": "Organization",
+    "position": "Position",
+    "academicDegree": "Academic degree",
+    "academicGrade": "Academic grade",
+    "reportName": "Report name",
+    "conferenceDirection": "Conference direction",
+    "concernForm": "Form of participation",
+    "email": "Email",
+    "phoneNumber": "Phone number",
+    "address": "Address",
     "booking": {
-      "label": "test",
-      "optionsTitle": "test",
-      "independently": "test",
-      "required": "test",
-      "hasRoom": "test"
+      "label": "Booking (select)",
+      "optionsTitle": "Select an option",
+      "independently": "By yourself",
+      "required": "Space required",
+      "hasRoom": "Room in campus"
     },
-    "dropZoneLabel": "<span>test</span> test",
+    "dropZoneLabel": "<span>Click to upload</span> or drag",
     "errorMsg":{
-      "required": "test",
-      "minLength": "test",
-      "file": "Все файлы должны быть формата doc или docx"
+      "required": "Required field",
+      "minLength": "Minimum of 2 characters",
+      "file": "All files must be in doc or docx format"
     },
-    "dropZoneDescription": "test",
-    "submit": "test"
+    "dropZoneDescription": "The file containing the application for participation should be named as follows: The name of the participant, the word \"Application\" separated by a space (Ivanov_zajavka-conf.doc ) or (Ivanov_zajavka-shkola.doc ), a separate application should be made for each co-author. The file containing the article should be named after the first author (Ivanov.doc ).",
+    "submit": {
+      "idle": "Send a request",
+      "pending": "Sending...",
+      "error": "Error",
+      "success": "Success"
+    }
   },
   "articleRulesSection": {
-    "p1": "test",
-    "p2": "test",
-    "p3": "test",
-    "p4": "test",
-    "rulesAppendix": "test"
+    "p1": "Publications: The conference materials are planned to be published by the beginning of the conference, they will also be posted on the conference website. Mailing of conference collections by mail is not supposed. Articles will be indexed in the RSCI, provided with DOI.",
+    "p2": "There is no registration and registration fee, participation in the conference and the youth school is free. Payment for excursions and a festive dinner will be offered to full-time participants in the 3rd information letter, as well as upon arrival at registration.",
+    "p3": "Participants book their own accommodation. <a>A list of hotels in the application</a>, also freely available on the Internet.",
+    "p4": "Those wishing to book accommodation at the new campus of the Southern Federal University at 21 Sorge Street must submit an application to the address of the organizing committee of the conference no later than August 25, 2023. The cost of accommodation in double rooms with a separate kitchen is 700 rubles. per day (the price on the date of sending the letter).",
+    "rulesAppendix": "Rules for the design of articles"
   }
 }
