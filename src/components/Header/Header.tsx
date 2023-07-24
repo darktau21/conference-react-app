@@ -82,7 +82,7 @@ const Header: FC<{headerTheme: HeaderThemes}> = ({headerTheme}) => {
                 {t('header.articleRules')}
               </a>
 
-              <a href="#"
+              <a href="#contacts"
                 className="text-base font-semibold leading-6 ">
                 {t('header.contacts')}
               </a>

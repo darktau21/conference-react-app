@@ -62,7 +62,7 @@ const MobileMenuNav = ({changeState}: Props): ReactElement => {
             </a>
           </li>
           <li>
-            <a href="#" className={liClassNames}>
+            <a href="#contacts" className={liClassNames}>
               {t('header.contacts')}
             </a>
           </li>
