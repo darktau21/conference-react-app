@@ -9,29 +9,15 @@ const MembersSection: FC<{
   setHeaderTheme: Dispatch<SetStateAction<HeaderThemes>>
 }> = memo(({setHeaderTheme}) => {
   const themeRef = useHeaderTheme(HeaderThemes.light, setHeaderTheme);
-  const {t, i18n} = useTranslation();
+  const {t} = useTranslation();
 
   //TODO: Надо ли переводить карточки?
 
   return (
     <section ref={themeRef} className="bg-white">
       <div className="container mx-auto py-6 ">
-        <h1 id={'members-organising'}
-          className="font-bold text-3xl h-4 mb-16 xs:px-6 uppercase"
-        >
-          {t('membersSection.organisingHeading')}
-        </h1>
-        <MembersCardsContainer
-          title={t('membersSection.organisingCoChairs')}
-          // members={i18n.language === 'ru-RU' ? organisingCommittee.ru.coChairs : organisingCommittee.en.coChairs}
-          members={organisingCommittee.ru.coChairs}
-        />
-        <MembersCardsContainer title={t('membersSection.organisingMembers')}
-          // members={i18n.language === 'ru-RU' ? organisingCommittee.ru.members : organisingCommittee.en.members}
-          members={organisingCommittee.ru.members}
-        />
         <h1 id={'members-international'}
-          className="font-bold text-3xl h-4  mb-16 xs:px-6 uppercase">
+          className="font-bold text-3xl mb-16 xs:mb-8 xs:px-6 uppercase xs:text-2xl">
           {t('membersSection.intHeading')}
         </h1>
         <MembersCardsContainer title={t('membersSection.intChairs')}
@@ -41,6 +27,25 @@ const MembersSection: FC<{
         <MembersCardsContainer title={t('membersSection.intMembers')}
           // members={i18n.language === 'ru-RU' ? internationalCommittee.ru.members : internationalCommittee.en.members}
           members={internationalCommittee.ru.members}
+        />
+        <h1 id={'members-organising'}
+          className="font-bold text-3xl mb-16 xs:mb-8 xs:px-6 uppercase xs:text-2xl"
+        >
+          {t('membersSection.organisingHeading')}
+        </h1>
+        <MembersCardsContainer
+          title={t('membersSection.organisingChairs')}
+          // members={i18n.language === 'ru-RU' ? organisingCommittee.ru.coChairs : organisingCommittee.en.coChairs}
+          members={organisingCommittee.ru.chairs}
+        />
+        <MembersCardsContainer
+          title={t('membersSection.organisingCoChairs')}
+          // members={i18n.language === 'ru-RU' ? organisingCommittee.ru.coChairs : organisingCommittee.en.coChairs}
+          members={organisingCommittee.ru.coChairs}
+        />
+        <MembersCardsContainer title={t('membersSection.organisingMembers')}
+          // members={i18n.language === 'ru-RU' ? organisingCommittee.ru.members : organisingCommittee.en.members}
+          members={organisingCommittee.ru.members}
         />
       </div>
     </section>

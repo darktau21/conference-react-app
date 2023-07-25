@@ -33,7 +33,7 @@
       "item5": "<span>16.09.2023</span> — field excursion to the long-term experience of contour and landscape farming (restoration of fertility of eroded arable land by conducting special crop rotations, tillage techniques and fertilizers) of the Federal Rostov Agricultural Research Center.",
       "item6": "<span>17.09.2023</span> — departure day."
     },
-    "place": "<span>VENUE</span> — Rostov-on-Don, Southern Federal University, B. Sadovaya str., 105",
+    "place": "<span>VENUE</span> — Rostov-on-Don, Southern Federal University, B. Sadovaya str., 105/42",
     "language": "<span>CONFERENCE LANGUAGE</span> — Russian, English",
     "participationForms": "<span>FORMS OF PARTICIPATION</span> — face-to-face participation (presentation or presentation of a poster report and publication of materials, online presentation) and correspondence participation (publication of materials only). The conference materials will be published in hard copy by the beginning of the conference.",
     "deadlineHeading": "CONTROL DATES",
@@ -45,6 +45,7 @@
   },
   "membersSection": {
     "organisingHeading": "ORGANIZING COMMITTEE OF THE CONFERENCE",
+    "organisingChairs": "Chairman",
     "organisingCoChairs": "Co-Chairs",
     "organisingMembers": "Members of the Organizing Committee",
     "intHeading": "INTERNATIONAL PROGRAM COMMITTEE OF THE CONFERENCE",
@@ -54,6 +55,7 @@
   "registrationForm": {
     "heading": "Registration form",
     "description": "To participate in the International Conference \"The current state of chernozems\" (or/and in the International Youth School-seminar)",
+    "rulesAppendix": "Rules for the design of articles",
     "lastname": "Lastname",
     "firstname": "Firstname",
     "middleName": "Middle Name",
@@ -63,7 +65,7 @@
     "academicDegree": "Academic degree",
     "academicGrade": "Academic grade",
     "reportName": "Report name",
-    "conferenceDirection": "Conference direction",
+    "conferenceDirection": "Conference direction (1 - 4)",
     "concernForm": "Form of participation",
     "email": "Email",
     "phoneNumber": "Phone number",
@@ -93,7 +95,9 @@
     "p1": "Publications: The conference materials are planned to be published by the beginning of the conference, they will also be posted on the conference website. Mailing of conference collections by mail is not supposed. Articles will be indexed in the RSCI, provided with DOI.",
     "p2": "There is no registration and registration fee, participation in the conference and the youth school is free. Payment for excursions and a festive dinner will be offered to full-time participants in the 3rd information letter, as well as upon arrival at registration.",
     "p3": "Participants book their own accommodation. <a>A list of hotels in the application</a>, also freely available on the Internet.",
-    "p4": "Those wishing to book accommodation at the new campus of the Southern Federal University at 21 Sorge Street must submit an application to the address of the organizing committee of the conference no later than August 25, 2023. The cost of accommodation in double rooms with a separate kitchen is 700 rubles. per day (the price on the date of sending the letter).",
-    "rulesAppendix": "Rules for the design of articles"
+    "p4": "Those wishing to book accommodation at the new campus of the Southern Federal University at 21 Sorge Street must submit an application to the address of the organizing committee of the conference no later than August 25, 2023. The cost of accommodation in double rooms with a separate kitchen is 700 rubles. per day (the price on the date of sending the letter)."
+  },
+  "contactsSection": {
+    "address": "test"
   }
 }

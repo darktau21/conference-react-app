@@ -1,11 +1,14 @@
 import { Dispatch, SetStateAction } from 'react';
 import { HeaderThemes } from '../../types/headerThemes.ts';
 import { useHeaderTheme } from '../../hooks/useHeaderTheme.ts';
+import { useTranslation } from 'react-i18next';
 
 const ContactsSection = ({setHeaderTheme}: {
   setHeaderTheme: Dispatch<SetStateAction<HeaderThemes>>
 }) => {
   const themeRef = useHeaderTheme(HeaderThemes.dark, setHeaderTheme);
+
+  const {t} = useTranslation();
 
   return (
     <footer id={'contacts'} ref={themeRef}
@@ -14,15 +17,13 @@ const ContactsSection = ({setHeaderTheme}: {
         alt="Southern Federal University"/>
       <img className={'w-[200px]'} src="/conference.webp" alt="Conference"/>
       <img className={'w-[150px]'} src="/soil-health.webp" alt="Soil health"/>
-      <div className={'sm:w-1/3 justify-self-end text-center'}>
-        <address className={'not-italic'}>
-          АДРЕС ОРГКОМИТЕТА: 344006, Ростов-на-Дону, пр. Стачки, 194/1
-          Южный федеральный университет,
-          Академия биологии и биотехнологии им. Д.И. Ивановского
+      <div className={'w-full justify-self-stretch text-center'}>
+        <address className={'not-italic w-full text-center'}>
+          {t('contactsSection.address')}
         </address>
-        <p>soil.health.conf@mail.ru</p>
-        <p>tischenko@sfedu.ru</p>
-        <p>snsushkova@sfedu.ru</p>
+        <p><a className={'text-indigo-600'} href="mailto:soil.health.conf@mail.ru">soil.health.conf@mail.ru</a></p>
+        <p><a className={'text-indigo-600'} href="mailto:tischenko@sfedu.ru">tischenko@sfedu.ru</a></p>
+        <p><a className={'text-indigo-600'} href="mailto:snsushkova@sfedu.ru">snsushkova@sfedu.ru</a></p>
       </div>
     </footer>
   );

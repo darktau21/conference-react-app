@@ -174,16 +174,16 @@ const RegistrationForm: FC = () => {
             options={inputOptions}
           />
         </div>
-        <div className={'xs:col-span-2'}>
+        <div className={'col-span-2'}>
           <Input
             label={t('registrationForm.conferenceDirection')}
             register={register}
             id={'conferenceDirection'}
-            options={inputOptions}
+            options={{...inputOptions, minLength: 0}}
             errorMessage={errors.conferenceDirection?.message}
           />
         </div>
-        <div className={'xs:col-span-2'}>
+        <div className={'col-span-2'}>
           <Input
             label={t('registrationForm.concernForm')}
             register={register}

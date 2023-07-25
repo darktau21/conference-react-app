@@ -96,11 +96,13 @@ const Header: FC<{headerTheme: HeaderThemes}> = ({headerTheme}) => {
             >
               <option
                 value={'ru-RU'}
+                className={'text-black'}
               >
                 RU
               </option>
               <option
                 value={'en-US'}
+                className={'text-black'}
               >
                 EN
               </option>

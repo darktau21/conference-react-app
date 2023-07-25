@@ -8,22 +8,31 @@ interface IMembersStorage {
 
 export const organisingCommittee: IMembersStorage = {
   ru: {
+    chairs: [
+      {
+        name: 'Ирина Кактотам',
+        sfeduRank: 'Главная тётя универа',
+        sfeduLink: '?????',
+        confRank: 'Хз',
+        imgLink: '/person.webp',
+      }
+    ],
     coChairs: [
       {
         name: 'Безуглова Ольга Степановна',
         sfeduRank: 'д.б.н., профессор кафедры почвоведения и оценки земельных ресурсов Академии биологии и биотехнологии им. Д.И. Ивановского Южного федерального университета',
         confRank: 'Председатель Ростовского отделения Общества почвоведов им. В.В. Докучаева, руководитель Рабочей группы по изучению черноземов.',
-        imgLink: '/person.webp',
+        imgLink: '/members/Bezuglova.webp',
       },
       {
         name: 'Казеев Камиль Шагидуллович',
         sfeduRank: 'д.г.н., профессор, директор Академии биологии и биотехнологии им. Д.И. Ивановского Южного федерального университет',
-        imgLink: '/person.webp',
+        imgLink: '/members/Kazeev.webp',
       },
       {
         name: 'Минкина Татьяна Михайловна',
         sfeduRank: 'д.б.н., профессор, зав. кафедрой почвоведения и оценки земельных ресурсов Академии биологии и биотехнологии им. Д.И. Ивановского Южного федерального университета',
-        imgLink: '/person.webp',
+        imgLink: '/members/Minkina.webp',
       },
     ],
     members: [
@@ -125,7 +134,7 @@ export const internationalCommittee: IMembersStorage = {
         name: 'Минг Хунг Вонг (Ming Hung Wong)',
         sfeduRank: 'профессор, руководитель мегагранта «Биореставрация загрязненных почвенных экосистем»',
         confRank: ' главный научный сотрудник лаборатории «Здоровье почв», советник Образовательного университета Гонконга (The Education University of Hong Kong)',
-        imgLink: '/person.webp',
+        imgLink: '/members/Vong.webp',
       },
     ],
     members: [

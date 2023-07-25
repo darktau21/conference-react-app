@@ -15,7 +15,7 @@ const MembersCardsContainer: FC<MembersCardsContainerProps> = ({
 
   return (
     <>
-      <h2 className="font-bold text-3xl h-4 xs:mt-[100px] mb-20 xs:px-6 ">
+      <h2 className="font-bold text-3xl xs:text-2xl xs:mt-[100px] mb-20 xs:px-6 ">
         {title}
       </h2>
       <div id="Cards-first"

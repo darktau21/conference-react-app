@@ -34,14 +34,6 @@ const ArticleRulesSection: FC<{
           <p className="pb-2.5">
             {t('articleRulesSection.p4')}
           </p>
-          <div className="mt-4">
-            <a href="/pdf/Правила-оформления-статей.pdf"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="text-indigo-300">
-              {t('articleRulesSection.rulesAppendix')}
-            </a>
-          </div>
         </div>
       </div>
     </section>

@@ -31,6 +31,14 @@ const FormSection: FC<{
         <p className="mt-2 text-base leading-8 text-gray-600">
           {t('registrationForm.description')}
         </p>
+        <div className="mt-4">
+          <a href="/pdf/Правила-оформления-статей.pdf"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="text-indigo-600 hover:text-indigo-500 font-semibold underline text-xl">
+            {t('registrationForm.rulesAppendix')}
+          </a>
+        </div>
       </div>
       <RegistrationForm/>
     </section>
