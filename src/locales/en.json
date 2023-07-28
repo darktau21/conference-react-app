@@ -50,7 +50,9 @@
     "organisingMembers": "Members of the Organizing Committee",
     "intHeading": "INTERNATIONAL PROGRAM COMMITTEE OF THE CONFERENCE",
     "intChairs": "Chairman",
-    "intMembers": "Program Сommittee members"
+    "intMembers": "Program Committee members",
+    "secretaryHeading":	"Secretary of the Organizing Committee",
+    "techSecretaryHeading":	"Technical secretaries"
   },
   "registrationForm": {
     "heading": "Registration form",
@@ -81,7 +83,8 @@
     "errorMsg":{
       "required": "Required field",
       "minLength": "Minimum of 2 characters",
-      "file": "All files must be in doc or docx format"
+      "file": "All files must be in doc or docx format",
+      "fileEmpty": "At least one file required"
     },
     "dropZoneDescription": "The file containing the application for participation should be named as follows: The name of the participant, the word \"Application\" separated by a space (Ivanov_zajavka-conf.doc ) or (Ivanov_zajavka-shkola.doc ), a separate application should be made for each co-author. The file containing the article should be named after the first author (Ivanov.doc ).",
     "submit": {

@@ -252,6 +252,10 @@ const RegistrationForm: FC = () => {
           watch={watch}
           options={{
             validate: {
+              isNotEmpty: (files: FileList) => {
+                if (files.length === 0) return t('registrationForm.errorMsg.fileEmpty');
+                return true;
+              },
               isDoc: (files: FileList) => {
                 for (let i = 0; i < files.length; i++) {
                   if (!['application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'].includes(files[i].type)) {

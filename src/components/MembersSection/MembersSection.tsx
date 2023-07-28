@@ -1,9 +1,9 @@
-import { Dispatch, FC, memo, SetStateAction } from 'react';
+import {Dispatch, FC, memo, SetStateAction} from 'react';
 import MembersCardsContainer from './MembersCardsContainer.tsx';
-import { internationalCommittee, organisingCommittee } from './memberData.ts';
-import { useHeaderTheme } from '../../hooks/useHeaderTheme.ts';
-import { HeaderThemes } from '../../types/headerThemes.ts';
-import { useTranslation } from 'react-i18next';
+import {internationalCommittee, organisingCommittee} from './memberData.ts';
+import {useHeaderTheme} from '../../hooks/useHeaderTheme.ts';
+import {HeaderThemes} from '../../types/headerThemes.ts';
+import {useTranslation} from 'react-i18next';
 
 const MembersSection: FC<{
   setHeaderTheme: Dispatch<SetStateAction<HeaderThemes>>
@@ -47,6 +47,17 @@ const MembersSection: FC<{
           // members={i18n.language === 'ru-RU' ? organisingCommittee.ru.members : organisingCommittee.en.members}
           members={organisingCommittee.ru.members}
         />
+
+        <MembersCardsContainer title={t('membersSection.secretaryHeading')}
+          // members={i18n.language === 'ru-RU' ? organisingCommittee.ru.members : organisingCommittee.en.members}
+          members={organisingCommittee.ru.secretary}
+        />
+        <MembersCardsContainer title={t('membersSection.techSecretaryHeading')}
+          // members={i18n.language === 'ru-RU' ? organisingCommittee.ru.members : organisingCommittee.en.members}
+          members={organisingCommittee.ru.techSecretary}
+        />
+
+
       </div>
     </section>
   );
