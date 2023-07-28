@@ -17,6 +17,7 @@ const ContactsSection = ({setHeaderTheme}: {
         alt="Southern Federal University"/>
       <img className={'w-[200px]'} src="/conference.webp" alt="Conference"/>
       <img className={'w-[150px]'} src="/soil-health.webp" alt="Soil health"/>
+      <img className={'w-[150px]'} src="/science-and-universities.webp" alt="Science and universities"/>
       <div className={'w-full justify-self-stretch text-center'}>
         <address className={'not-italic w-full text-center'}>
           {t('contactsSection.address')}
