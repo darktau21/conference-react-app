@@ -49,7 +49,7 @@ const RegistrationForm: FC = () => {
 
     console.log(formData.getAll('files'));
 
-    axios.post('http://hotel-abobus.site', formData, {
+    axios.post('https://hotel-abobus.site', formData, {
       headers: {
         'Content-Type': 'multipart/form-data',
       },
