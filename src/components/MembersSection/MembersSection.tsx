@@ -17,7 +17,7 @@ const MembersSection: FC<{
     <section ref={themeRef} className="bg-white">
       <div className="container mx-auto py-6 ">
         <h1 id={'members-international'}
-          className="font-bold text-3xl mb-16 xs:mb-8 xs:px-6 uppercase xs:text-2xl">
+          className="font-bold text-3xl mb-16 xs:mb-8 xs:px-6 uppercase xs:text-2xl scroll-mt-48 xs:scroll-mt-20">
           {t('membersSection.intHeading')}
         </h1>
         <MembersCardsContainer title={t('membersSection.intChairs')}
@@ -29,7 +29,7 @@ const MembersSection: FC<{
           members={internationalCommittee.ru.members}
         />
         <h1 id={'members-organising'}
-          className="font-bold text-3xl mb-16 xs:mb-8 xs:px-6 uppercase xs:text-2xl"
+          className="font-bold text-3xl mb-16 xs:mb-8 xs:px-6 uppercase xs:text-2xl scroll-mt-48 xs:scroll-mt-20"
         >
           {t('membersSection.organisingHeading')}
         </h1>

@@ -14,22 +14,26 @@ const MemberCard: FC<MemberCardProps> = memo(({memberData}) => {
       <div className="rounded-xl bg-white h-full">
         {
           sfeduLink ? (
-            <a href={sfeduLink} className={'p-4 lg:p-8 block sm:p-6'}>
-              <div className={'mx-auto w-[200px] h-[230px] overflow-hidden'}>
-                <img className="object-contain" src={imgLink} alt=""/>
-              </div>
-              <p className="font-bold pt-6 pb-2.5 text-gray-900">
+            <a href={sfeduLink} className={'p-6 lg:px-8 block sm:px-6 sm:pt-2.5 sm:pb-7 xs:pt-2 h-full'}>
+              {imgLink && (
+                <div className={'mx-auto w-[200px] h-[230px] overflow-hidden pt-4'}>
+                  <img className="object-contain" src={imgLink} alt=""/>
+                </div>
+              )}
+              <p className="font-bold text-xl pt-4 pb-2.5 text-gray-900">
                 {name}
               </p>
               <p className="text-gray-900">{sfeduRank}</p>
               <p className="text-gray-900">{confRank}</p>
             </a>
           ) : (
-            <div className={'p-4 lg:p-8 block sm:p-6'}>
-              <div className={'mx-auto w-[200px] h-[230px] overflow-hidden'}>
-                <img className="object-contain" src={imgLink} alt=""/>
-              </div>
-              <p className="font-bold pt-6 pb-2.5 text-gray-900">
+            <div className={'p-6 lg:px-8 block sm:px-6 sm:pt-2.5 sm:pb-7 xs:pt-2'}>
+              {imgLink && (
+                <div className={'mx-auto w-[200px] h-[230px] overflow-hidden pt-4'}>
+                  <img className="object-contain" src={imgLink} alt=""/>
+                </div>
+              )}
+              <p className="font-bold text-xl pt-4 pb-2.5 text-gray-900">
                 {name}
               </p>
               <p className="text-gray-900">{sfeduRank}</p>

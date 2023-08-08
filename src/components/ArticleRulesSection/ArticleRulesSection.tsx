@@ -10,7 +10,7 @@ const ArticleRulesSection: FC<{
   const {t} = useTranslation();
 
   return (
-    <section id={'article-rules'} ref={themeRef} className="bg-green-700">
+    <section id={'article-rules'} ref={themeRef} className="bg-green-700 scroll-mt-48 xs:scroll-mt-20">
       <div className="container mx-auto text-white xs:m-w-[300px] px-6 mb-10">
         <div className="p-10 list-decimal leading-7">
           <p className="pb-2.5">

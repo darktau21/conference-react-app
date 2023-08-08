@@ -26,6 +26,12 @@ const ContactsSection = ({setHeaderTheme}: {
         <p><a className={'text-indigo-600'} href="mailto:tischenko@sfedu.ru">tischenko@sfedu.ru</a></p>
         <p><a className={'text-indigo-600'} href="mailto:snsushkova@sfedu.ru">snsushkova@sfedu.ru</a></p>
       </div>
+      <div className={'w-full justify-self-stretch text-center'}>
+        <p>
+          Проведение III Международной конференции «Современное состояние черноземов» и II Международной научной школы для молодых ученых проводится при финансовой поддержке Министерства науки и высшего образования Российской Федерации в рамках Мегагранта, соглашение № 075-15-2022-1122.
+        </p>
+        <p><a className={'text-indigo-600'} href="https://soilhealth.sfedu.ru/">https://soilhealth.sfedu.ru/</a></p>
+      </div>
     </footer>
   );
 };
